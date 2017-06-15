@@ -34,9 +34,7 @@ int sol(){
                 if(numberofgreenbyposition[r][c]>ret) ret=numberofgreenbyposition[r][c];
             }
             else numberofgreenbyposition[r][c]=0;
-            // printf("%d",numberofgreenbyposition[r][c]);
         }   
-        // printf("\n");
     }
     return ret;
 }
@@ -49,7 +47,6 @@ int main(){
     scanf("%d",&tc);
     for(int nt=1;nt<=tc;nt++){
         scanf("%d %d %d",&N,&M,&K);
-        // printf("%d %d %d\n",N,M,K);
 
         char temp[100];
         for(int r=0;r<N;r++){
@@ -58,14 +55,9 @@ int main(){
                 if(temp[c]=='.') tree[r][c]=0;
                 else{ 
                     tree[r][c]=1;
-                    // printf("This was %delse \n",tree[N][M]);
-                    
                 }
-                // printf("%d",tree[r][c]);
             }
-            // printf("\n");
         }
-        // printf("%d %d %d\n",N,M,K);
         printf("Case #%d: %d\n",nt,sol());
         
     }
